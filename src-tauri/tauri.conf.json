@@ -1,0 +1,127 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "gmg-pens-printing-tool",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "process": {
+        "all": true
+      },
+      "protocol": {
+        "asset": true,
+        "all": true,
+        "assetScope": [
+          "**"
+        ]
+      },
+      "all": true,
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true,
+        "scope": ["**", "$APPCACHE/*"]
+      },
+      "dialog": {
+        "all": true,
+        "open": true,
+        "save": true
+      },
+      "shell": {
+        "all": true,
+        "execute": true,
+        "sidecar": true,
+        "open": true,
+        "scope": [
+          {
+            "name": "convert",
+            "cmd": "gm",
+            "args": [
+              "convert",
+              "-density",
+              "600x600",
+              {
+                "validator": "[^\\s]+"
+              },
+              {
+                "validator": "[^\\s]+"
+              }
+            ]
+          },
+          {
+            "name": "hide folder",
+            "cmd": "attrib",
+            "args": [
+              "+h",
+              {
+                "validator": "[^\\s]+"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "shmuel.toporowitch.dev",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": "default-src blob: data: filesystem : ws: wss: http: https: tarui: 'unsafe-eval' 'unsave-inline' 'self': img-src 'self' data: asset: https://asset.localhost: media-src 'self': asset: https://asset.localhost"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "gmg-pens-printing-tool",
+        "width": 800
+      }
+    ]
+  }
+}

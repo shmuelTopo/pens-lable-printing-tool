@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto+Slab:wght@400;500;600;700;800;900&family=Suez+One&display=swap');:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  box-sizing: border-box;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
