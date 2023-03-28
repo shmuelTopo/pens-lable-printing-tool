@@ -2,7 +2,7 @@
 
 ## Overview 
 
-The Pen Label Generator is an internal software tool for generating labels for pens. It's designed to automate the process, eliminating the need to create labels manually. The software reads a folder containing the pens and allows users to add pens and customize their labels. Once all the pens are entered, the software generates a PDF file containing the labels to be printed on label paper.
+The Pen Label Generator is an internal software tool for generating labels for pens. It's designed to automate the process, eliminating the need to create labels manually, saving hours of manual of labor work every week. The software reads a folder containing the pens and allows users to add pens and customize their labels. Once all the pens are entered, the software generates a PDF file containing the labels to be printed on label paper.
 
 ## Features
 
@@ -13,7 +13,6 @@ The Pen Label Generator has several features that make it an ideal tool for gene
 - The ability to edit the name of each pen label
 - The option to choose which images to display for each pen
 
-[![Show case](https://img.youtube.com/vi/ZqW_FsI8lr8/0.jpg)](https://www.youtube.com/watch?v=ZqW_FsI8lr8)
 
 ## Requirements
 
@@ -41,3 +40,7 @@ To use the Pen Label Generator:
 5. Customize the font size of any desired pen and change its name as needed.
 6. Click "Save as PDF" to generate the PDF file containing the labels.
 7. Print the PDF file on the label paper and cut the labels as desired.
+
+
+## Video showcase
+[![Show case](https://img.youtube.com/vi/VC2AWlFR7F0/0.jpg)](https://www.youtube.com/watch?v=VC2AWlFR7F0)
