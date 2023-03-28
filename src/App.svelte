@@ -54,14 +54,14 @@
     </TabList>
 
     <TabPanel>
-      <h1>Welcome to GMG Pen Printing tool</h1>
+      <h1>Welcome to the Pen Printing tool</h1>
       <button on:click={addToCart}>Add all to cart</button>
       <hr />
       <div class="inputFolder">
         <FolderSelector
           lable="Select Input Folder"
           callback={loadPens}
-          folderId="input-gmg-pens"
+          folderId="input-pens"
           bind:folder={inputFolder}
         />
         <PenInput bind:pens={penNames} submit={addPen} />

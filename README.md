@@ -13,6 +13,7 @@ The Pen Label Generator has several features that make it an ideal tool for gene
 - The ability to edit the name of each pen label
 - The option to choose which images to display for each pen
 
+[![Show case](https://img.youtube.com/vi/ZqW_FsI8lr8/0.jpg)](https://www.youtube.com/watch?v=ZqW_FsI8lr8)
 
 ## Requirements
 

@@ -36,7 +36,7 @@
     on:click={() => {
         const tempShowLines = showLines;
         showLines = false;
-        printPens(pages, () => showLines = tempShowLines);
+        printPens(pages, () => (showLines = tempShowLines));
     }}>Save as Pdf</button
 >
 <button on:click={() => (showLines = !showLines)}

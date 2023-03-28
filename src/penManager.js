@@ -19,8 +19,8 @@ export default class PensManager {
         const entries = await readDir(inputFolder.path, { recursive: false });
         this.penNames = entries.map((entrie) => entrie.name);
         
-        await createDir(inputFolder.path + "\\.gmg-tag-png", { recursive: true });
-        const command = new Command('hide folder', ["+h", `${inputFolder.path}\\.gmg-tag-png`])
+        await createDir(inputFolder.path + "\\.tag-png", { recursive: true });
+        const command = new Command('hide folder', ["+h", `${inputFolder.path}\\.tag-png`])
         command.spawn()
         return this.penNames
     }
@@ -31,9 +31,9 @@ export default class PensManager {
     }
 
     async clearCache() {
-        const isDir = await exists(this.inputFolder.path + '\\.gmg-tag-png')
+        const isDir = await exists(this.inputFolder.path + '\\.tag-png')
         if(!isDir) return
-        await removeDir(this.inputFolder.path + '\\.gmg-tag-png', {recursive: true})
+        await removeDir(this.inputFolder.path + '\\.tag-png', {recursive: true})
     }
 
     async addPen(id, penName) {
@@ -41,7 +41,7 @@ export default class PensManager {
             throw new Error('Please set the folder before adding pens')
         }
         const inputPath = `${this.inputFolder.path}\\${id}`
-        const baseOutputPath = this.inputFolder.path + '\\.gmg-tag-png'
+        const baseOutputPath = this.inputFolder.path + '\\.tag-png'
         await createDir(`${baseOutputPath}\\${id}`, { dir: BaseDirectory.Downloads, recursive: true });
         
         const outputPath = `${baseOutputPath}\\${id}`
@@ -121,15 +121,15 @@ class Pen {
     }
 
     saveStateToLocalStorage() {
-        const pens = JSON.parse(localStorage.getItem('gmg-pens-dataset'))
+        const pens = JSON.parse(localStorage.getItem('pens-dataset'))
         pens[this.id] = {penName: this.penName, imageIndex: this.imageIndex, fontSize: this.fontSize, imgSrc: this.getSelectedImage()}
-        localStorage.setItem('gmg-pens-dataset', JSON.stringify(pens))
+        localStorage.setItem('pens-dataset', JSON.stringify(pens))
     }
 
     fetchFromLocalStorage() {
-        const pens = JSON.parse(localStorage.getItem('gmg-pens-dataset'))
+        const pens = JSON.parse(localStorage.getItem('pens-dataset'))
         if(!pens) {
-            localStorage.setItem('gmg-pens-dataset', JSON.stringify({}))
+            localStorage.setItem('pens-dataset', JSON.stringify({}))
             return
         }
 

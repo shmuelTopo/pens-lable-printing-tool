@@ -24,7 +24,7 @@ export default async function print(pages, callback) {
     }
 
     try {
-        const hi = await myNewJsPdf.save(`GMG pens tags - ${new Date().toLocaleDateString("en-US")}.pdf`, {returnPromise: true})
+        const hi = await myNewJsPdf.save(`pens tags - ${new Date().toLocaleDateString("en-US")}.pdf`, {returnPromise: true})
         callback()
     } catch(e) {
         console.error(e)

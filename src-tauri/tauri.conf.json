@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "gmg-pens-printing-tool",
+    "productName": "pens-printing-tool",
     "version": "0.0.0"
   },
   "tauri": {
@@ -119,7 +119,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "gmg-pens-printing-tool",
+        "title": "pens-printing-tool",
         "width": 800
       }
     ]

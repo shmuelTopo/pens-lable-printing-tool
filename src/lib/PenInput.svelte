@@ -8,14 +8,14 @@
 
     function getPenName(id) {
         const penId = removeBold(id)
-        const pens = JSON.parse(localStorage.getItem("gmg-pens-dataset"))
+        const pens = JSON.parse(localStorage.getItem("pens-dataset"))
         if(!pens || !pens[penId] || !pens[penId].penName) return ""
         return ` - ${pens[penId].penName}`
     }
 
     function getPenImg(id) {
         const penId = removeBold(id)
-        const pens = JSON.parse(localStorage.getItem("gmg-pens-dataset"))
+        const pens = JSON.parse(localStorage.getItem("pens-dataset"))
         if(!pens || !pens[penId]) return ""
         return pens[penId].imgSrc
     }
