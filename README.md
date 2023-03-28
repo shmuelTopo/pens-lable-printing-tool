@@ -13,6 +13,14 @@ The Pen Label Generator has several features that make it an ideal tool for gene
 - The ability to edit the name of each pen label
 - The option to choose which images to display for each pen
 
+
+## Requirements
+
+To use the Pen Label Generator, you need to meet the following requirements:
+
+- **Ghostscript:** Download and install Ghostscript from [https://ghostscript.com/releases/gsdnld.html](https://ghostscript.com/releases/gsdnld.html) and make sure it's in the path.
+- **GraphicsMagick:** Download and install GraphicsMagick from [https://sourceforge.net/projects/graphicsmagick/files/](https://sourceforge.net/projects/graphicsmagick/files/) and make sure it's in the path under the command name ```gm```.
+
 ## Installation
 
 To install the Pen Label Generator:
